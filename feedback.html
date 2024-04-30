@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>FeedBack</title>
+    <style>
+        .title{
+            font-family: serif;
+            text-align: center;
+        }
+        .richieste {
+            font-family: serif;
+            margin-left: 4%;
+        }
+
+        .recensioni {
+            font-family: serif;
+            color: #FFDB58
+        }
+
+        .paragrafo {
+            font-family: arial;
+
+        }
+
+        .container {
+            display: flex;
+            margin-left: 5%;
+            gap: 5%; 
+        }
+
+        .avatar img {
+           width: 100px;
+           height: 100px;
+           margin: 20px;
+           border-radius: 50%;
+           border: 2px solid #fff;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .info {
+           display: block;
+           margin-bottom: 10px;
+           font-size: 10px;
+           text-align: left;
+           margin-left: 30px;
+        }
+
+        .background {
+            background-image: url(img/computer-2982270_640.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        input[type="text"] {
+          width: 40%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+        }
+
+        textarea.form-control {
+          width: 41%;
+          max-width: 100%;
+          border: 1px solid #ccc;
+        }
+
+        button {
+          position: relative;
+          display: inline-block;
+          margin: 6px;
+          padding: 5px 15px;
+          text-align: center;
+          font-size: 18px;
+          letter-spacing: 1px;
+          text-decoration: none;
+          color: #000000;
+          background: transparent;
+          cursor: pointer;
+          transition: ease-out 0.5s;
+          border: 2px solid #FFDB58;
+          border-radius: 10px;
+          box-shadow: inset 0 0 0 0#FFDB58;
+        }
+
+        button:hover {
+         color: white;
+         box-shadow: inset 0 -100px 0 0  #FFD801;
+        }
+
+        button:active {
+         transform: scale(0.9);
+        }
+
+        @media (max-width: 576px) {
+        .container {
+            flex-direction: column; /* Imposta la disposizione dei contenitori su colonna */
+            margin-left: 2%; /* Riduci il margine sinistro per adattare lo spazio */
+        }
+
+        input[type="text"],
+        textarea.form-control {
+            width: 100%; /* Fai in modo che gli input occupino tutta la larghezza disponibile */
+        }
+
+        .info {
+            margin-left: 0; /* Rimuovi il margine sinistro per gli input */
+            font-size: 14px; /* Aumenta la dimensione del testo per una migliore leggibilità */
+        }
+
+        button {
+            margin: 10px 0; /* Aggiungi spazio sopra e sotto il pulsante */
+        }
+    }
+
+    </style>
+
+</head>
+<body>
+    <!--Barra di navigazione-->
+    <div class="bar">
+        <nav class="navbar navbar-expand-lg bar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="img/Logo2.png" alt="Logo" style="height: 10%; width: 20%;"> <!-- Inserisci qui il percorso del tuo logo -->
+                </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <!--Menu di navigazione-->
+              <div class="container">
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Servizi</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Feedback</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Appuntamenti</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Contatti</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Developer</a>
+                  </li>
+    
+                </ul>
+              </div>
+            </div>
+        </div>
+        <!--Pulsante DEMO-->
+            <button class="DEMO" style="margin-right: 5%;"> DEMO
+            </button>
+          </nav>
+          </div>
+    
+    <!--Sezione recensioni dei clienti-->
+    <h1 class="title">Clienti Soddisfatti</h1>
+
+    
+    <div class="container">
+    <div>
+        <div class="avatar">
+        <img src="img/1eb95a3eaef402828b3e539006afde30.jpg" alt="...">
+    </div>
+        <h4 class="recensioni">Angela Bianchi di Estetica Verde</h4>
+        <p class="paragrafo">"Grazie a ... abbiamo migliorato il servizio <br>
+             offerto ai nostri clienti,<br>
+             così da facilitare tutte le nostre prenotazioni."</p>
+    </div>
+
+    
+    <div>
+    <div class="avatar">
+        <img src="img/34fcb02071356c164bb2be0671d54786.jpg" alt="...">
+    </div>
+        <h4 class="recensioni">Francesca Tordi di L'Essenza del benessere</h4>
+        <p class="paragrafo">"Dopo aver contattato ... si sono resi subito disponibili <br>
+            per aiutarmi a migliorare il mio andamento di lavoro."
+            </p>
+    </div>
+   
+    
+    <div>
+    <div class="avatar">   
+        <img src="img/6f4976b4a39d01d5c775b70ce970827f.jpg" alt="...">
+    </div>
+        <h4 class="recensioni">Andrea Marrone Il Quinto Canto</h4>
+        <p class="paragrafo">"Ho subito avuto una ottima impressione sulle persone <br>
+             che lavorano in questo campo, e grazie a loro adesso <br>
+              riesco a gestire tutti i clienti senza alcun problema."</p>
+    </div>
+    </div>
+    <br>
+    
+    <!--Sezione richiesta modifica applicativo-->
+    <h2 class="richieste">Richiedi modifica Applicativo</h2>
+    <br>
+
+    <div class="background">
+    <form class="info" action="#" method="post">
+        <br>
+        <label for="nome"></label>
+        <input type="text" placeholder="Cognome - Nome" name="nome" id="NomeID" required /> 
+        <br>
+
+        <label for="azienda"></label>
+        <input type="text" placeholder="Azienda:" name="Azienda" id="AziendaID" required />
+        <br>
+
+        <label for="email"></label>
+        <input type="text" placeholder="Email:" name="Email" id="EmailID" required />
+        <br>
+
+        <label for="citta"></label>
+        <input type="text" placeholder="Città:" name="Citta" id="CittaID" required />
+        <br>
+
+        <label for="telefono"></label>
+        <input type="text" placeholder="Telefono:" name="Telefono" id="TelefonoID" required />
+        <br>
+
+        <label for="informazione"></label>
+        <textarea class="form-control" placeholder="Ulteriori Informazioni:" rows="8"required></textarea>
+        <br>
+
+        <button class="DEMO">Richiedi</button>
+    </form>
+    </div>
+
+    <!--Footer del sito-->
+    <footer>
+        <div class="footer-section">
+            <!--Sezione delle tecnologie usate-->
+            <h3>Tecnologie</h3>
+            <p>HTML</p>
+            <P>CSS</P>
+            <P>BOOTSTRAP</P>
+            <P>JAVASCRIPT</P>
+            <P>JAVA</P>
+        </div>
+
+        <div class="footer-section">
+            <!--Sezione per il dowloand della Brochure-->
+            <h3>Download</h3>
+            <p>Scarica la nostra Brochure</p>
+
+            <button id="openModalButton" class="download-btn">
+              <svg
+                id="download"
+                viewBox="0 0 24 24"
+                data-name="Layer 1"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.29,17.29,13,18.59V13a1,1,0,0,0-2,0v5.59l-1.29-1.3a1,1,0,0,0-1.42,1.42l3,3a1,1,0,0,0,.33.21.94.94,0,0,0,.76,0,1,1,0,0,0,.33-.21l3-3a1,1,0,0,0-1.42-1.42ZM18.42,6.22A7,7,0,0,0,5.06,8.11,4,4,0,0,0,6,16a1,1,0,0,0,0-2,2,2,0,0,1,0-4A1,1,0,0,0,7,9a5,5,0,0,1,9.73-1.61,1,1,0,0,0,.78.67,3,3,0,0,1,.24,5.84,1,1,0,1,0,.5,1.94,5,5,0,0,0,.17-9.62Z"
+                ></path>
+              </svg>
+            </button>
+          
+            <div id="myModal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Inserisci la tua email</h2>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Inserisci la tua email">
+                  <div id="emailHelp" class="form-text"></div>
+                </div>
+                <button id="richiediButton" class="DEMO" > SCARICA
+                </button>
+              </div>
+            </div>
+            
+
+        </div>
+        <div class="footer-section">
+            <!--Sezione dei social media-->
+            <h3>Social</h3>
+            <div style="margin-left: 17%;">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+            <div class="center">
+            <div id="social-test">
+            <ul class="social">
+              <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
+              <li><i class="fa fa-twitter" aria-hidden="true"></i>
+            </li>
+              <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
+              <li><i class="fa fa-github" aria-hidden="true"></i>
+            </li>
+             
+            </ul>
+            </div>
+            </div>
+          </div>
+            
+                
+          </div>
+           </footer>
+          
+           <!--JavaScript-->
+           <script>
+            const openModalButton = document.getElementById('openModalButton');
+const modal = document.getElementById('myModal');
+const closeButton = document.querySelector('.close');
+const downloadButton = document.querySelector('.download-btn');
+const emailInput = document.getElementById('exampleInputEmail1');
+
+openModalButton.addEventListener('click', function() {
+  modal.style.display = 'block';
+});
+
+closeButton.addEventListener('click', function() {
+  modal.style.display = 'none';
+});
+
+window.addEventListener('click', function(event) {
+  if (event.target === modal) {
+    modal.style.display = 'none';
+  }
+});
+
+downloadButton.addEventListener('click', function() {
+  const email = emailInput.value;
+  console.log('Email inserita:', email);
+  
+  modal.style.display = 'none';
+});
+            const form = document.querySelector('.info');
+            const submitButton = document.querySelector('.info button');
+        
+            submitButton.addEventListener('click', function(event) {
+                event.preventDefault(); 
+        
+                // Validazione dei campi
+                const nomeInput = document.getElementById('NomeID').value.trim();
+                const aziendaInput = document.getElementById('AziendaID').value.trim();
+                const emailInput = document.getElementById('EmailID').value.trim();
+                const cittaInput = document.getElementById('CittaID').value.trim();
+                const telefonoInput = document.getElementById('TelefonoID').value.trim();
+                const informazioniInput = document.querySelector('.info textarea').value.trim();
+        
+                if (nomeInput === '' || aziendaInput === '' || emailInput === '' || cittaInput === '' || telefonoInput === '' || informazioniInput === '') {
+                    alert('Riempi tutti i campi!');
+                    return; // Esce dalla funzione senza inviare il modulo se un campo è vuoto
+                }
+        
+                // Se tutti i campi sono stati compilati, invia il modulo e visualizza l'alert di successo
+                alert('Richiesta inviata con successo!');
+                form.reset(); // Resetta il modulo dopo l'invio
+            });
+
+            
+
+        </script>
+
+</body>
+</html>
